@@ -1,9 +1,5 @@
 # QuinStreet: Programming Assessment - Frontend Developer
 
-## Front-end Developer Assessment
-
-Hi, this is the front-end developer assessment package.
-
 ### Package JS Contents
 
 - Vanilla JS
