@@ -1,0 +1,198 @@
+@use "variables";
+
+/* General style and classes */
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: variables.$body-font;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 30px;
+    box-sizing: border-box;
+    color: variables.$grey-color; 
+    position: relative;
+    padding-bottom: 92px;
+    &::before, &::after {
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 80px);
+        min-height: 100vh;
+        top: 80px;
+    }
+    &::before {
+        content: "";
+        background: url(/assets/img/iStock-524178070@2x.png) center top repeat;
+        z-index: -2;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    &::after {
+        content: "";
+        background: rgb(255,255,255);
+        background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+        height: 187px;
+        z-index: -1;
+        left: 0;
+    }
+    @media only screen and (max-width: variables.$layout-medium) {
+        padding-bottom: 42px;
+    }
+}
+main {
+    padding: 0 15px;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    border: 0 !important;
+}
+h1, .h1 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+}
+h2, .h2 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 15px;
+}
+input[type="text"],
+input[type="email"],
+input[type="phone"] {
+    padding: 10px 25px 8px;
+    width: 100%;
+    border: 1px solid variables.$border-color;
+    background-color: variables.$light-color;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px 0px inset;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    color: variables.$input-color;
+    max-width: 100%;
+    &:focus {
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-color: inherit;
+        outline-offset: 2px;
+    }
+    @media only screen and (max-width: variables.$layout-medium) {
+        padding: 12.5px 8.34px 7.5px 10.88px;
+    }
+    &.input {
+        &--error {
+            border-color: variables.$error-color;
+            box-shadow: rgba(variables.$error-color, 0.5) 0px 1px 2px 0px inset;
+        }
+    }
+}
+button[type="submit"] {
+    border-radius: 100px;
+    background-color: variables.$orange-color;
+    max-width: 333.61px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 0.85px;
+    line-height: 24px;
+    color: variables.$light-color;
+    margin: 0 auto;
+    display: table;
+    padding: 14px 20px 10px;
+    cursor: pointer;
+    @media only screen and (max-width: variables.$layout-medium) {
+        max-width: 100%;
+    }
+    &:disabled, &[disabled] {
+        opacity: 0.5;
+        cursor: default;
+    }
+}
+.text-center {
+    text-align: center;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.module {
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -13.28px;
+        margin-right: -13.28px;
+        row-gap: 20px;
+        @media only screen and (max-width: variables.$layout-medium) {
+            margin-left: -5.625px;
+            margin-right: -5.625px;
+        }
+    }
+    &_col {
+        flex: 0 0 auto;
+        padding-left: 13.28px;
+        padding-right: 13.28px;
+        @media only screen and (max-width: variables.$layout-medium) {
+            padding-left: 5.625px;
+            padding-right: 5.625px;
+        }
+        &--1-of-1 {
+            width: 100%;
+        }
+        &--1-of-2 {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+    }
+}
+
+.btn--read-more {
+    color: variables.$blue-light-color;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.module_messages {
+    &:not(empty) {
+        margin-bottom: 20px;
+    }
+    &--success {
+        color: variables.$successs-color;
+    }
+    &--error {
+        color: variables.$error-color;
+    }
+}
+
+@-webkit-keyframes background-animation {
+    0%   { background-color: variables.$background-color-state-1; }
+    100% { background-color: variables.$background-color-state-2; }
+}
+  @-moz-keyframes background-animation {
+    0%   { background-color: variables.$background-color-state-1; }
+    100% { background-color: variables.$background-color-state-2; }
+}
+  @-o-keyframes background-animation {
+    0%   { background-color: variables.$background-color-state-1; }
+    100% { background-color: variables.$background-color-state-2; }
+}
+  @keyframes background-animation {
+    0%   { background-color: variables.$background-color-state-1; }
+    100% { background-color: variables.$background-color-state-2; }
+}
+/* End General style and classes */

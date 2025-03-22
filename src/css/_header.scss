@@ -1,0 +1,14 @@
+@use "variables";
+
+/* Header */
+header {
+    background-color: variables.$grey-color;
+    padding: 22px 20px 21px;
+    .module_logo {
+        height: 37px;
+        max-width: 100%;
+        margin: 0 auto;
+        display: table;
+    }
+}
+/* End Header*/
