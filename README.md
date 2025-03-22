@@ -9,6 +9,10 @@
 - Normalize CSS
 - SASS
 
+### Test package
+
+- Jest
+
 
 ----
 
@@ -48,3 +52,11 @@ $ npm run dev
 ```
 
 Open the Local url in your browser.
+
+### Run tests
+
+Open up the project in any CLI and run the following commands:
+
+```
+$ npm run test
+```
