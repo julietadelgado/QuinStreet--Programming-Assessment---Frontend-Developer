@@ -1,4 +1,5 @@
 @use "variables";
+@use "mixins";
 
 /* General style and classes */
 
@@ -41,7 +42,7 @@ body {
         z-index: -1;
         left: 0;
     }
-    @media only screen and (max-width: variables.$layout-medium) {
+    @include mixins.layout-medium {
         padding-bottom: 42px;
     }
 }
@@ -89,7 +90,7 @@ input[type="phone"] {
         outline-color: inherit;
         outline-offset: 2px;
     }
-    @media only screen and (max-width: variables.$layout-medium) {
+    @include mixins.layout-medium {
         padding: 12.5px 8.34px 7.5px 10.88px;
     }
     &.input {
@@ -113,7 +114,7 @@ button[type="submit"] {
     display: table;
     padding: 14px 20px 10px;
     cursor: pointer;
-    @media only screen and (max-width: variables.$layout-medium) {
+    @include mixins.layout-medium {
         max-width: 100%;
     }
     &:disabled, &[disabled] {
@@ -134,7 +135,7 @@ button[type="submit"] {
         margin-left: -13.28px;
         margin-right: -13.28px;
         row-gap: 20px;
-        @media only screen and (max-width: variables.$layout-medium) {
+        @include mixins.layout-medium {
             margin-left: -5.625px;
             margin-right: -5.625px;
         }
@@ -143,7 +144,7 @@ button[type="submit"] {
         flex: 0 0 auto;
         padding-left: 13.28px;
         padding-right: 13.28px;
-        @media only screen and (max-width: variables.$layout-medium) {
+        @include mixins.layout-medium {
             padding-left: 5.625px;
             padding-right: 5.625px;
         }
