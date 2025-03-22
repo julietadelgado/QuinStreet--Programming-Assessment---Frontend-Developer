@@ -2,7 +2,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: 'https://julietadelgado.github.io/QuinStreet--Programming-Assessment---Frontend-Developer/',
+  base: '/QuinStreet--Programming-Assessment---Frontend-Developer/',
   css: {
     preprocessorOptions: {
       scss: {
